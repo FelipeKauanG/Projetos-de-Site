@@ -1,0 +1,40 @@
+h1{
+    color: white;
+}
+#nameValue:hover{
+    cursor: text;
+}
+#nameValue::placeholder{
+    color: black;
+}
+#compass{
+    font-size: 15vw;
+    animation-name: "compassAnim";
+    animation-duration: 1s;
+    color: white;
+}
+::selection{
+    background-color: white;
+    color: black;
+}
+*{
+    overflow: hidden;
+}
+
+
+#res{
+    color: white;
+    font-size: 1.5em;
+}
+body{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: 20px;
+    transform: translate(-50%, -50%);
+
+}
+aside{
+    margin: 50px;
+}
