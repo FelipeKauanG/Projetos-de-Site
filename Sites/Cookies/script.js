@@ -47,7 +47,12 @@ if (cNome != ""){
 
 setInterval(function(){
     const day = new Date()
+    day.getTimezoneOffset()
     let text = day.toUTCString()
     var tempo = text.split(" ")[4]
-    horas.innerHTML = `${tempo}` 
+    horas.innerHTML = `${tempo}`
+    console.log(day)
 }, 1000)
+
+
+
