@@ -1,39 +1,53 @@
-var nameValue = document.getElementById("nameValue")
 var res = document.getElementById("res")
 let nameButton = document.getElementById("nameButton")
+let nameValue = document.getElementById("nameValue")
+var horas = document.querySelector("#horas")
 
 
-nameValue = nameValue.value
-
-if (document.cookie == ""){ // Setup do Cookie
-    document.cookie = "name=usuario"
-    document.cookie = "visitas=0"
+if (document.cookie == ""){
+    document.cookie = `nome=`
 }
-res.innerHTML = "Por favor, digite seu nome abaixo"
+
+function ChangeCookie(){
+    if (nameValue.value == ""){
+        alert("digite o seu nome primeiro!")
+    }else{
+        document.cookie = `nome=${nameValue.value}`
+        res.innerHTML = `Seja bem vindo(a) ${nameValue.value}`
+        
+    }
+}
+
 
 nameButton.addEventListener("click", function(){
-    nameValue = nameValue.value
-
+    ChangeCookie()
 })
 
-var nome = window.decodeURIComponent(document.cookie.split(";")[0].split("=")[1])
 
-var visitas = window.decodeURI(document.cookie.split(";")[1].split("=")[1])
+nameValue.addEventListener("keypress", (event) =>{
+    if(event.code == "Enter"){
+        ChangeCookie()
+    }
+})
 
-visitas = parseInt(visitas)
 
-console.log(document.cookie)
 
-console.log(`nome de usuario ${nome}`)
-console.log(`Numero de visitas ${visitas}`)
 
-if(visitas == 0){
-    document.cookie = "name=usuario"
-    document.cookie = "visitas=1"
+cNome = window.decodeURIComponent(document.
+cookie.split("=")[1])
+
+res.innerHTML = ""
+if (cNome != ""){
+    res.innerHTML = `Seja bem vindo(a) ${cNome}`
+}else{
     
-}else if(visitas > 0){
-    document.cookie = `usuario=usuario`
-    document.cookie = `visitas=${visitas+1}`
-    res.innerHTML = `Seja bem vindo #`
+    res.innerHTML = `Digite seu nome abaixo`
 }
 
+
+setInterval(function(){
+    const day = new Date()
+    let text = day.toUTCString()
+    var tempo = text.split(" ")[4]
+    horas.innerHTML = `${tempo}` 
+}, 1000)
