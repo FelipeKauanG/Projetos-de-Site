@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "horas";
+    src: url(fonts/Sacramento-Regular.ttf);
+}
+
 h1{
     color: white;
 }
@@ -16,14 +21,16 @@ h1{
 ::selection{
     background-color: white;
     color: black;
-} 
+}
 *{
-    overflow: hidden;
+    transition: .1s ease-in-out;
+    text-align: center;
 }
 #horas{
     color: white;
     font-size: 2em;
-    filter: drop-shadow(1px 1px 2px #0000ff);
+    font-family: "horas";
+    font-weight: bolder;
 }
 
 

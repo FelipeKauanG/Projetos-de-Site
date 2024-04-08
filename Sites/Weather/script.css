@@ -1,0 +1,23 @@
+#horas{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    text-align: center;
+}
+header{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30vh;
+}
+
+
+#CEP:hover{
+    cursor: text;
+}
+body{
+    height: 100%;
+    background-position: center;
+}
+

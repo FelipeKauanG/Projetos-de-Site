@@ -43,14 +43,11 @@ if (cNome != ""){
     
     res.innerHTML = `Digite seu nome abaixo`
 }
-
+ 
 
 setInterval(function(){
-    const day = new Date()
-    day.getTimezoneOffset()
-    let text = day.toUTCString()
-    var tempo = text.split(" ")[4]
-    horas.innerHTML = `${tempo}`
+    const day = window.decodeURIComponent(new Date()).split(" ")[4]
+    horas.innerHTML = day
     console.log(day)
 }, 1000)
 
