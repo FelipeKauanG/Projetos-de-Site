@@ -7,6 +7,8 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-## Sites
-Cookies:
-https://felipekauang.github.io/Projetos-de-Site/Sites/Cookies/index.html
+| Site | link |
+| -------- | ------- |
+| Cookies | https://felipekauang.github.io/Projetos-de-Site/Sites/Cookies/index.html |
+| Weather view | https://felipekauang.github.io/Projetos-de-Site/Sites/Cookies/index.html |
+
