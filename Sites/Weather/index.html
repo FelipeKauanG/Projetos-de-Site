@@ -5,23 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="script.css">
-    <link rel="shortcut icon" href="images/Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/cloudy_1163661 (1).png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body class="bg-dark">
+<body id="background">
     <header>
-        <article>
-            <div id="horas"></div>
-        </article>
-        <aside>
-            <div class="btn-group">
-                <input class="btn btn-success" type="text" name="CEP" id="CEP">
-                <button class="btn btn-success" type="button">Enviar meu CEP</button>
+        <nav>
+            <div>
+                <a target="_blank" href="https://www.linkedin.com/in/felipe-kauan-476749247/"><img class="shield" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
+
+                <a target="_blank" href="https://github.com/FelipeKauanG?tab=repositories"><img class="shield" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a>
             </div>
+
+            <div class="accordion" id="Termos">
+                <div class="accordion-item">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">política de privacidade e dados</button>
+                      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="termos">
+                            <p><strong>Ultilização de dados</strong>:
+                            <p class="desc">Seus dados serão guardados sempre em cookies, um pacote de dados que se armazena no dispositivo do usuário.
+                            </p>
+                            </p>
+                        </div>
+                        <div class="termos">
+                            <p><strong>O que são Cookies</strong>:
+                            <p class="desc">Cookies são arquivos armazenados no seu computador que é usado para manipulação de dados de um site/servidor</p>
+                            <p class="desc">
+
+                                <a target="_blank" href="https://pt.wikipedia.org/wiki/Cookie_(informática)"><span class="material-symbols-outlined">link</span>Wikipédia</a>
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+        <aside>
+
+            <div id="resWeather">
+            </div>
+
         </aside>
+        <footer>
+            <div id="horas"><span id="watch" class="material-symbols-outlined">pace</span></div>
+            <div class="btn-group">
+                <input class="btn btn-light" type="text" name="city" id="city">
+
+                <button id="sendcity" class="btn btn-light" type="button">Pesquisar</button>
+            </div>
+            <div id="cityname">city</div>
+            <div class="btn-group">
+
+                <input class="btn" type="text" placeholder="ENTER YOUR API" required="true" name="API" id="API">
+
+                <a target="_blank" href="https://home.openweathermap.org/api_keys"><button id="help" class="btn">?</button></a>
+            </div>
+        </footer>
     </header>
+    <div id="info">Clique aqui para criar uma chave da API</div>
 </body>
-<script type="module" src="script.js"></script>
+<script type="module" src="scripts/GetWeather.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </html>
