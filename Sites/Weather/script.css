@@ -1,6 +1,7 @@
 *{
     margin: 0;
     transition: .3s ease-in-out;
+    image-rendering: optimizeSpeed;
 }
 
 #horas{
@@ -9,14 +10,7 @@
     background-color: rgba(0, 0, 0, 0.450);
     border-radius: 7px 7px 0px 0px;
 }
-#resWeather{
-    transition: 1s ease-in-out;
-    background-color: transparent;
-    text-align: center;
-    border-radius: 5px;
-    padding: 50px;
-    font-size: 5em;
-}
+
 header{
     display: flex;
     height: 100vh;
@@ -56,11 +50,78 @@ header{
     padding: 10px;
     cursor: text;
 }
+#resClima{
+    color: white;
+}
+#sun, #cloud, #wind{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 3em;
+}
+#sun{
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/Sun.png);
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+    left: 40%;
+    top: 20%;
+    z-index: 1;
+    text-align: center;
+    line-height: 100px;
+    color: black;
+    font-size: 3em;
+}
+#cloud{
+    position: relative;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    background-image: url(images/Cloud.png);
+    z-index: 2;
+    height: 100px;
+    width: 130px;
+    top: 5%;
+    left: 70%;
+    line-height: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+}
+#wind{
+    overflow: hidden;
+    position: relative;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-image: url(Gifs/Wind\ 1.gif);
+    height: 200px;
+    width: 200px;
+    top: -10%;
+    left: 20%;
+    line-height: 100px;
+}
+#sun::after{
+    content: "A";
+    position: relative;
+    top: -20px;
+}
+#cloud::after{
+    content: "B";
+    position: relative;
+}
+#wind::after{
+    content: "C";
+    position: relative;
+    left:10px;
+    top: 10px;
+}
+
 #API:hover{
     background-color: #0077B5;
 }
 #help{
     color: white;
+    background-color: #212529;
     font-size: 1.5em;
     font-weight: bold;
     width: 50px;
@@ -78,13 +139,19 @@ header{
 #cityname:hover{
     background-color: #0077B5;
 }
-.accordion-body p, strong, a, div, h1, span{
-    color: rgb(255, 255, 255);
-    background-color: var(--bs-gray-900);
+#horas{
+    color: white;
 }
 footer{
     display: flex;
     flex-direction: column;
+}
+#cityname{
+    color: white;
+    background-color: #212529;
+}
+#API:hover{
+    color: white;
 }
 
 nav img:hover{
@@ -107,6 +174,7 @@ nav{
 #background{
     transition: 10s linear;
     background-color: black;
+    background-attachment: fixed;
 }
 .termos{
     margin-bottom: 20px;

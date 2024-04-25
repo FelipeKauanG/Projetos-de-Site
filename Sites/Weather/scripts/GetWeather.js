@@ -6,9 +6,7 @@ var background = document.querySelector("body")
 var resHoras = document.querySelector("#horas")
 var help = document.getElementById("help")
 var info = document.getElementById("info")
-
-
-
+var resClima = document.querySelector("#resClima")
 
 
 
@@ -120,8 +118,6 @@ var cityButton = document.getElementById("sendcity")
 var apiButton = document.getElementById("API")
 
 
-
-
 if (document.cookie == ""){
     document.cookie = "city="
     document.cookie = "api="
@@ -156,10 +152,25 @@ if (document.cookie == ""){
     lembrarAPI()
 }
 
+function drawIconsWeather(winSpeed, description){
+
+    resClima.innerHTML = ""
+    if (winSpeed < 38){
+        resClima.innerHTML += `Vento fraco ${winSpeed} km/h`
+    }else if(39 <= winSpeed && winSpeed <= 49){
+        resClima.innerHTML += `Vento moderado: ${winSpeed}Km/h` 
+    }else if(50 <= winSpeed && winSpeed <= 61){
+        resClima.innerHTML += `Vento forte: ${winSpeed}Km/h`
+    }
+    else{
+        resClima.innerHTML += `Ventania: ${winSpeed}Km/h`
+    }
+
+    //if (description == "")
 
 
 
-
+}
 
 
 
@@ -176,11 +187,17 @@ function partCity(){
             document.cookie = `city=${cityText.value}`
 
 
-        var urlWeather =`https://api.openweathermap.org/data/2.5/weather?q=${String(cityText.value).trim().replaceAll(" ", "+")}&appid=${apiButton.value}`
+            var urlWeather =`https://api.openweathermap.org/data/2.5/weather?q=${String(cityText.value).trim().replaceAll(" ", "+")}&appid=${apiButton.value}&units=metric`
+            fetch(urlWeather).then(response=>{
+                response.json().then(data=>{
+                    console.log(data)
+                    var winSpeed = data.wind.speed
+                    var description = data.weather[0].description
+                    console.log(description)
+                    drawIconsWeather(winSpeed, description)
 
-        let weatherText = fetch(urlWeather)
-
-        console.log(weatherText)
+                })
+            })
         }
     }
 
