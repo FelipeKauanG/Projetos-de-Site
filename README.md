@@ -10,4 +10,4 @@
 | Nº | Site | link |
 | ------- | -------- | ------- |
 | **1** | **Cookies** | **https://felipekauang.github.io/Projetos-de-Site/Sites/Cookies/index.html** |
-| **2** | **Weather view** | **https://felipekauang.github.io/Projetos-de-Site/Sites/Cookies/index.html** |
+| **2** | **Weather view** | **https://felipekauang.github.io/Projetos-de-Site/Sites/Weather/index.html** |
