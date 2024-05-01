@@ -9,6 +9,12 @@ var info = document.getElementById("info")
 var resClima = document.querySelector("#resClima")
 
 
+//Id para exportar informações
+var innerCountry = document.getElementById("country")
+var innerWindSpeed = document.getElementById("windSpeed")
+var innerRain =  document.getElementById("rain")
+var innerHumidty = document.getElementById("humidity")
+var innerTemperature = document.getElementById("temperature")
 
 /*
     Mudando o background
@@ -152,21 +158,34 @@ if (document.cookie == ""){
     lembrarAPI()
 }
 
-function drawIconsWeather(winSpeed, description){
+function drawIconsWeather(country, windSpeed, rain, humidty, temperature){
 
-    resClima.innerHTML = ""
-    if (winSpeed < 38){
-        resClima.innerHTML += `Vento fraco ${winSpeed} km/h`
-    }else if(39 <= winSpeed && winSpeed <= 49){
-        resClima.innerHTML += `Vento moderado: ${winSpeed}Km/h` 
-    }else if(50 <= winSpeed && winSpeed <= 61){
-        resClima.innerHTML += `Vento forte: ${winSpeed}Km/h`
+    function getCountry(){
+        innerCountry.innerHTML = `${country}`
     }
-    else{
-        resClima.innerHTML += `Ventania: ${winSpeed}Km/h`
+    
+    function getwindSpeed(){
+
+        innerWindSpeed.innerHTML = `Velocidade do vento: ${windSpeed}Km/h`
     }
 
-    //if (description == "")
+    function getRain(){
+        innerRain.innerHTML = `${rain}`
+    }
+
+    function getHumidty(){
+        innerHumidty.innerHTML = `Humidade: ${humidty}%`
+    }
+
+    function getTemperature(){
+        innerTemperature.innerHTML = `Temperatura: ${temperature}°C`
+    }
+
+    getTemperature()
+    getHumidty()
+    getRain()
+    getwindSpeed()
+    getCountry()
 
 
 
@@ -186,16 +205,20 @@ function partCity(){
         else{
             document.cookie = `city=${cityText.value}`
 
-
-            var urlWeather =`https://api.openweathermap.org/data/2.5/weather?q=${String(cityText.value).trim().replaceAll(" ", "+")}&appid=${apiButton.value}&units=metric`
+            var urlWeather =`https://api.openweathermap.org/data/2.5/weather?q=${String(cityText.value).trim().replaceAll(" ", "+")}&appid=${apiButton.value}&units=metric&lang=pt_br`
             fetch(urlWeather).then(response=>{
                 response.json().then(data=>{
                     console.log(data)
-                    var winSpeed = data.wind.speed
-                    var description = data.weather[0].description
-                    console.log(description)
-                    drawIconsWeather(winSpeed, description)
 
+                    var country = data.name
+                    var windSpeed = data.wind.speed
+                    var rain = data.weather[0].description
+                    var humidity = data.main.humidity
+                    var temperature = data.main.temp
+
+                    console.log(country, windSpeed, rain, humidity, temperature)
+                    
+                    drawIconsWeather(country, windSpeed, rain, humidity, temperature)
                 })
             })
         }

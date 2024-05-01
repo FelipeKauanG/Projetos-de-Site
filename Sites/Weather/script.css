@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "resClima";
+    src: url(fonts/Dekko-Regular.ttf);
+}
+
 *{
     margin: 0;
     transition: .3s ease-in-out;
@@ -51,74 +56,22 @@ header{
     cursor: text;
 }
 #resClima{
-    color: white;
-}
-#sun, #cloud, #wind{
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    font-size: 3em;
-}
-#sun{
-    overflow: hidden;
-    position: relative;
-    background-image: url(images/Sun.png);
-    transform: translate(-50%, -50%);
-    height: 100px;
-    width: 100px;
-    left: 40%;
-    top: 20%;
-    z-index: 1;
+    font-family: "resClima";
     text-align: center;
-    line-height: 100px;
-    color: black;
-    font-size: 3em;
-}
-#cloud{
-    position: relative;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-    background-image: url(images/Cloud.png);
-    z-index: 2;
-    height: 100px;
-    width: 130px;
-    top: 5%;
-    left: 70%;
-    line-height: 100px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 3em;
-}
-#wind{
-    overflow: hidden;
-    position: relative;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    background-image: url(Gifs/Wind\ 1.gif);
+    color: rgb(2, 42, 56);
+    background-color: rgba(240, 248, 255, 0.736);
+    font-size: 1.5em;
+    border-radius: 20px;
     height: 200px;
-    width: 200px;
-    top: -10%;
-    left: 20%;
-    line-height: 100px;
-}
-#sun::after{
-    content: "A";
-    position: relative;
-    top: -20px;
-}
-#cloud::after{
-    content: "B";
-    position: relative;
-}
-#wind::after{
-    content: "C";
-    position: relative;
-    left:10px;
-    top: 10px;
+    width: 500px;
+    line-height: 40px;
+    vertical-align: middle;
 }
 
 #API:hover{
     background-color: #0077B5;
 }
+
 #help{
     color: white;
     background-color: #212529;
@@ -158,11 +111,6 @@ nav img:hover{
     cursor: pointer;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .desc{
     text-indent: 2rem;
 }
@@ -179,10 +127,7 @@ nav{
 .termos{
     margin-bottom: 20px;
 }
-.accordion{
-    width: 75vw;
-    max-width: 1400px;
-}
+
 ::-webkit-scrollbar{
     background-color: rgb(26, 34, 39);
 }

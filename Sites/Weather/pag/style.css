@@ -1,0 +1,48 @@
+*{
+    transition: 1s cubic-bezier(1, 0.1, 0, 1);
+}
+.accordion{
+    width: 60vw;
+    max-width: 1400px;
+}
+.accordion-item{
+    background-color: #212529;
+    color: white;
+}
+body{
+    background-color: #212529;
+    color: white;
+    text-align: center;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe{
+    height: 500px;
+    width: 60vw;
+}
+#home{
+    font-size: 2em;
+}
+.carousel-control-prev-icon{
+    color: black;
+    filter: invert();
+}
+
+.carousel-control-next-icon{
+    color: black;
+    filter: invert();
+}
+::-webkit-scrollbar{
+    background-color: #212529;
+}
+::-webkit-scrollbar-button{
+    color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
+}
