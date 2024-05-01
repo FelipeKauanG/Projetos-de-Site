@@ -148,9 +148,6 @@ if (document.cookie == ""){
         }else{
             cityText.value = cookie2.split("=")[1]
         }
-
-        console.log(cookie1)
-        console.log(cookie2)
     }
 
 
@@ -158,10 +155,10 @@ if (document.cookie == ""){
     lembrarAPI()
 }
 
-function drawIconsWeather(country, windSpeed, rain, humidty, temperature){
+function drawIconsWeather(country, windSpeed, rain, humidty, temperature, flag){
 
     function getCountry(){
-        innerCountry.innerHTML = `${country}`
+        innerCountry.innerHTML = `${country}, ${flag}`
     }
     
     function getwindSpeed(){
@@ -180,6 +177,7 @@ function drawIconsWeather(country, windSpeed, rain, humidty, temperature){
     function getTemperature(){
         innerTemperature.innerHTML = `Temperatura: ${temperature}°C`
     }
+
 
     getTemperature()
     getHumidty()
@@ -207,19 +205,21 @@ function partCity(){
 
             var urlWeather =`https://api.openweathermap.org/data/2.5/weather?q=${String(cityText.value).trim().replaceAll(" ", "+")}&appid=${apiButton.value}&units=metric&lang=pt_br`
             fetch(urlWeather).then(response=>{
+                if(response.status == "404"){
+                    alert("Erro, localidade não encontrada")
+                }else{
                 response.json().then(data=>{
-                    console.log(data)
 
                     var country = data.name
                     var windSpeed = data.wind.speed
                     var rain = data.weather[0].description
                     var humidity = data.main.humidity
                     var temperature = data.main.temp
-
-                    console.log(country, windSpeed, rain, humidity, temperature)
-                    
-                    drawIconsWeather(country, windSpeed, rain, humidity, temperature)
+                    var flag = data.sys.country
+                    drawIconsWeather(country, windSpeed, rain, humidity, temperature, flag)
                 })
+            }
+                
             })
         }
     }
