@@ -1,0 +1,26 @@
+*{
+    margin: 0 ;
+}
+fieldset{
+    color: white;
+    border: 1px solid white;
+    width: 500px;
+}
+#gta_sa_map_finder{
+    width: 400px;
+}
+#info{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Tahoma';
+    height: fit-content;
+    width: 80px;
+    font-size: 10pt;
+    border-radius: 10px;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
