@@ -80,7 +80,7 @@ search.addEventListener('click', (event)=>{
 })
 
 
-
+ 
 
 /*CHAMADAS DE FUNÇÕES*/
 SelectCoords()
