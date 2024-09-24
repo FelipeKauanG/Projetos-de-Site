@@ -35,11 +35,23 @@ function SelectCoords(){
         var coordsY = Math.floor((coords.height/2 - y) -coords.top) * 12
 
 
-        var margin = 15
+        var margin = 30
+        console.log(`X:${x},Width:${window.innerWidth} = ${window.innerWidth - x}`)
 
-        info.style.left = `${x+margin}px`
-        info.style.top = `${y+margin}px`
-        info.innerHTML = `X:${coordsX}<br>Y:${coordsY}`
+        var larguraInfo = info.offsetWidth + margin
+        if (window.innerWidth - x <= larguraInfo){
+
+            info.style.left = `${x- larguraInfo}px`
+            info.style.top = `${y+margin}px`
+            info.innerHTML = `X:${coordsX}<br>Y:${coordsY}`
+
+        }
+        else{
+            info.style.left = `${x+margin}px`
+            info.style.top = `${y+margin}px`
+            info.innerHTML = `X:${coordsX}<br>Y:${coordsY}`
+        }
+        
     })
 
     /*FUNÇÃO PARA ATUALIZAR O ENDEREÇO DO LINK NO INPUT*/
