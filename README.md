@@ -11,4 +11,4 @@
 | ------- | -------- | ------- |
 | **1** | **Cookies** | **https://felipekauang.github.io/Projetos-de-Site/Sites/Cookies/index.html** |
 | **2** | **Weather view** | **https://felipekauang.github.io/Projetos-de-Site/Sites/Weather/index.html** |
-| **3** | **GTA SA MODEL FINDER** | https://felipekauang.github.io/Projetos-de-Site/Sites/GTA-SA-MODEL-FINDER\index.html** |
+| **3** | **GTA SA MODEL FINDER** | **https://felipekauang.github.io/Projetos-de-Site/Sites/GTA-SA-MODEL-FINDER/index.html** |
