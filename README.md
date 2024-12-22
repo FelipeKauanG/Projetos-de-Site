@@ -16,36 +16,56 @@
 
 ## Tarefas de sites
 
-Criar um site que **mostra a hora, e o background muda conforme o momento e clima** de acordo com um dia.
-
-Faça um site de um **contador de clicks por segundo**, e um benchmark de habilidades.
-
-Um site que seria uma **réplica do Paint**.
-
-Crie um site que contém a técnica do paralax.
-
-Fazer um site que simula o **livro do Minecraft** contendo páginas e poder imprimir as páginas em PDF.
-
-Fazer um site de visualização de um **espectro de frequência de audio**.
-
-Fazer um site que simule um **setup gamer em Pixel Art**.
-
-Faça um programa de **partículas que acompanham o cursor** ou repelem.
-
-Faça um site que **simula a gravidade** usando uma bolinha com qualquer textura.
-
-Fazer um site que ensina a fazer os **Jutsus do universo de Naruto**.
-
-Fazer um site que ensine a fazer todas as **poções do Minecraft** e que podemos guardar elas em um baú de acordo com a precisão de como o usuário fez a poção.
-
-Fazer um site que faça combinações de **tangram**.
-
-Fazer um site que calcule a **média de uma determinada quantidades de cores** diferentes.
-
-Fazer um site que ensine **libras**.
-
-Fazer um site que ensine **Braille**.
-
-Fazer um site que Transforma letras de um campo em letras com estilo **LCD ( Liquid Crystal Display )**.
-
-
+ 1. ~~Faça um site que deixe o usuário digitar palavras ou números que
+    guarde em um cookie do site~~
+ 2. Criar um site que **mostra a hora, e o background muda conforme o
+    momento e clima** de acordo com um dia.
+ 3. Faça um site de um **contador de clicks por segundo**, e um
+    benchmark de habilidades.
+ 4. Um site que seria uma **réplica do Paint**.
+ 5. Crie um site que contém a técnica do paralax.
+ 6. Fazer um site que simula o **livro do Minecraft** contendo páginas e poder imprimir as páginas em PDF.
+ 7. Fazer um site de visualização de um **espectro de frequência de audio**.
+ 8. Fazer um site que simule um **setup gamer em Pixel Art**.
+ 9. Faça um programa de **partículas que acompanham o cursor** ou repelem.
+ 10. Faça um site que **simula a gravidade** usando uma bolinha com qualquer textura.
+ 11. Fazer um site que ensina a fazer os **Jutsus do universo de Naruto**.
+ 12. Fazer um site que ensine a fazer todas as **poções do Minecraft** e
+que podemos guardar elas em um baú de acordo com a precisão de como o usuário fez a poção.
+ 13. Fazer um site que faça combinações de **tangram**.
+ 14. Fazer um site que calcule a **média de uma determinada quantidades de cores** diferentes.
+ 15. Fazer um site que ensine **libras**.
+ 16. Fazer um site que ensine **Braille**.
+ 17. Fazer um site que Transforma letras de um campo em letras com estilo **LCD ( Liquid Crystal Display )**.
+ 18. Fazer um site que **simule LEDs RGB**.
+ 19. Fazer um site que carrega um **arquivo .OBJ ou .FBX**.
+ 20. Fazer um site que **simule um teclado** e destacar as teclas pressionadas.
+ 21. Faça um site que simule algumas **funções de um celular**.
+ 22. Faça um site que **simule um computador**.
+ 23. Faça um site que **simule um ventilador**.
+ 24. Faça um programa que leia o **movimento de um volante Logitec**.
+ 25. Fazer um site sobre **portas lógicas**.
+ 26. Fazer um site que simule um quarto **acendendo ou apagando as luzes**.
+ 27. Faça um site que simule um **controle de console funcional**.
+ 28. Fazer um site de uma **sorveteria** com vários sabores de sorvete.
+ 29. Criar um site que ensine a fazer os **códigos de cada GTA**.
+ 30. Desenvolver um site que simule um **carregador de celular**.
+ 31. Fazer um site de um jogo de **apostas de cavalo**.
+ 32. Fazer um site do jogo de azar **"21" de cassinos**.
+ 33. Fazer um site de **caça-níquel**.
+ 34. Criar um site de um quis de **placas de trânsito**.
+ 35. Fazer um site para **celular que interage conforme a orientação da tela muda**.
+ 36. Faça um site que use o **display grid e geração de elementos automaticamente**.
+ 37. Faça um site que simule um **ar condicionado**.
+ 38. Faça um site que simule o **comportamento de uma corda**.
+ 39. Fazer um site que ensine a fazer os **lanches do Burguer King**.
+ 40. Fazer um site que ensine a fazer os **lanches do McDonnalds**.
+ 41. Fazer um site que lê **beatmaps do OSU!** e mostrar como seria.
+ 42. Fazer um site que **ensine o português**.
+ 43. Fazer um site que ao digitar o nome da **cidade**, aparecer o formato dela e poder baixar como um spline.
+ 44. Criar um programa que cria **ruas de um bairro** que ao apontar com o cursor, uma pessoa ir até esse ponto.
+ 45. Fazer um site que simula um **mouse mexendo no PC**.
+ 46. Criar um site que cria uma **roda RGB**.
+ 47. Criar um site de **Minecraft que explode** um elemento.
+ 48. Fazer um site **multiplayer** que podemos ver vários mouses simultaneamente.
+ 
