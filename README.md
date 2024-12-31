@@ -68,4 +68,6 @@ que podemos guardar elas em um baú de acordo com a precisão de como o usuário
  46. Criar um site que cria uma **roda RGB**.
  47. Criar um site de **Minecraft que explode** um elemento.
  48. Fazer um site **multiplayer** que podemos ver vários mouses simultaneamente.
+ 49. fazer um sctipt que cria um template para **mapas de OSU**, incluindo quantidade, música, nome, etc
+ 50. fazer um site que carregue as informações de **jogadores de OSU e suas medalhas**, gráfico de radar mostrando as habilidades ,etc.
  
