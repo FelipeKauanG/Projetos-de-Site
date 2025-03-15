@@ -35,9 +35,9 @@ header{
     border: 1px solid black;
 }
 #link::placeholder{
-    position: relative;
     color: rgb(1, 255, 234);
-    right: 44%;
+    position: relative;
+    text-align: justify;
 }
 #link:hover{
     color: white;
@@ -46,7 +46,6 @@ header{
 #res{
     text-align: justify;
 }
-
 #info{
     display: none;
     position: absolute;
@@ -62,21 +61,15 @@ header{
     text-align: center;
     vertical-align: middle;
 }
-#scrap{
-    color: #0B5ED7;
-    cursor: pointer;
-    font-size: 3em;
-    filter: drop-shadow(0px 0px  5px rgba(0, 242, 255, 0.439));
-}
-#chooseFile{
-    color: white;
-}
-#conteudo{
+
+#imgs{
     position: relative;
-    height: 100px;
-    width: 70%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
     left: 50%;
+    top: 10%;
     transform: translate(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 70vw;
+    height: 100px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 5px solid blue;
 }
