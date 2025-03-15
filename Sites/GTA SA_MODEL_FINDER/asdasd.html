@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregar e Processar HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Carregar Arquivo HTML</h1>
+
+    <!-- Input para carregar o arquivo -->
+    <input type="file" id="fileInput" accept=".html">
+    
+    <!-- Botão para processar o arquivo (inicialmente desativado) -->
+    <button id="processFileBtn" disabled>Processar Arquivo</button>
+
+    <!-- Local onde o conteúdo do arquivo será exibido -->
+    <div id="output">O conteúdo do arquivo será exibido aqui...</div>
+
+    <script>
+        let fileURL = null; // Variável para armazenar a URL temporária do arquivo
+
+        // Referência ao botão e ao campo de input de arquivo
+        const fileInput = document.getElementById('fileInput');
+        const processFileBtn = document.getElementById('processFileBtn');
+        const output = document.getElementById('output');
+
+        // Quando o usuário seleciona o arquivo .html
+        fileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0]; // Pega o arquivo selecionado
+            
+            if (file && file.type === 'text/html') {
+                // Cria uma URL temporária para o arquivo .html
+                fileURL = URL.createObjectURL(file);
+                processFileBtn.disabled = false; // Habilita o botão
+            } else {
+                alert('Por favor, selecione um arquivo .html válido.');
+                processFileBtn.disabled = true; // Desabilita o botão se o arquivo não for válido
+            }
+        });
+
+        // Função para fazer fetch no arquivo e exibir o conteúdo
+        processFileBtn.addEventListener('click', async function() {
+            if (fileURL) {
+                try {
+                    const response = await fetch(fileURL);
+                    const htmlContent = await response.text(); // Lê o conteúdo do arquivo como texto
+                    output.innerHTML = htmlContent; // Exibe o conteúdo do arquivo no div 'output'
+                } catch (error) {
+                    console.error('Erro ao carregar o arquivo:', error);
+                }
+            } else {
+                alert("Nenhum arquivo foi carregado.");
+            }
+        });
+    </script>
+
+</body>
+</html>

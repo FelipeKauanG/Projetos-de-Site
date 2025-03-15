@@ -1,9 +1,10 @@
 /*VARIÁVEIS*/
-var img = document.getElementById('gta_sa_map_finder')
-var info = document.getElementById('info')
-var res = document.getElementById('res')
-var search = document.getElementById('search')
-var link = document.getElementById('link')
+const img = document.getElementById('gta_sa_map_finder')
+const info = document.getElementById('info')
+const res = document.getElementById('res')
+const search = document.getElementById('search')
+
+const link = document.getElementById('link')
 
 
 /*FUNÇÃO PARA QUANDO ENTRAR NO MAPA, APARECER O INFO*/
@@ -74,7 +75,7 @@ function SelectCoords(){
 
 }
 
-/*FUNÇÃO PARA DAR UM FETCH (PESQUISAR) NA WEB*/
+/*FUNÇÃO ABRIR O SITE EM UMA NOVA GUIA*/
 
 search.addEventListener('click', (event)=>{
     function Pesquisar(){
@@ -83,18 +84,22 @@ search.addEventListener('click', (event)=>{
             alert("Por favor, clique no mapa para inserir as coordenadas")
         }else{
             
-            var URL = fetch(link.value)
+            alert("Carregue e aperte CTRL + S no site")
 
-            console.log(URL)
+            window.open(link.value, "_target")
+
+
         }
     }
     Pesquisar()
 })
 
 
- 
+abrirHTML()
+
 
 /*CHAMADAS DE FUNÇÕES*/
 SelectCoords()
 entrar()
 sair()
+
