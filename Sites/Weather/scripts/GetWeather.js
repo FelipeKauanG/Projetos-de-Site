@@ -24,10 +24,10 @@ setInterval(function(){
     var horas = window.decodeURIComponent(new Date()).split(" ")[4]
     resHoras.innerHTML = horas
 
-    
+
     var hora = decodeURIComponent(new Date()).split(" ")[4].split(":")[0]
-    
-    
+
+
     switch(hora %24){
         case 0:
             background.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,22,28,1) 100%)"
@@ -109,7 +109,7 @@ setInterval(function(){
             background.style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,40,50,1) 100%)"
             break
             }
-            
+
         },1000)
 
 
@@ -160,7 +160,7 @@ function drawIconsWeather(country, windSpeed, rain, humidty, temperature, flag){
     function getCountry(){
         innerCountry.innerHTML = `${country}, ${flag}`
     }
-    
+
     function getwindSpeed(){
 
         innerWindSpeed.innerHTML = `Velocidade do vento: ${windSpeed}Km/h`
@@ -171,7 +171,7 @@ function drawIconsWeather(country, windSpeed, rain, humidty, temperature, flag){
     }
 
     function getHumidty(){
-        innerHumidty.innerHTML = `Humidade: ${humidty}%`
+        innerHumidty.innerHTML = `Umidade: ${humidty}%`
     }
 
     function getTemperature(){
@@ -193,7 +193,7 @@ function drawIconsWeather(country, windSpeed, rain, humidty, temperature, flag){
 
 function partCity(){
     function sendCity(){
-        
+
         if(apiButton.value == ""){
             alert("Por favor insira o valor da API, clique em [?] para mais informções")
         }
@@ -219,7 +219,7 @@ function partCity(){
                     drawIconsWeather(country, windSpeed, rain, humidity, temperature, flag)
                 })
             }
-                
+
             })
         }
     }
@@ -227,7 +227,7 @@ function partCity(){
     cityButton.addEventListener("click", function(){
         sendCity()
     })
-    
+
     cityText.addEventListener("keypress", (event)=>{
         if(apiButton.value == ""){
             alert('Insira o valor da API, clique em [?] para mais informações ')
